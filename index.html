@@ -358,6 +358,37 @@
     html[dir="rtl"] .contact-form input, html[dir="rtl"] .contact-form textarea { direction: rtl; }
     .navbar { animation: navFadeIn .5s ease; }
     @keyframes navFadeIn { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }
+
+    /* ====== FLOATING WHATSAPP BUTTON ====== */
+    .floating-whatsapp { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .floating-whatsapp .wa-badge { background: linear-gradient(135deg, #25D366, #128C7E); color: #fff; font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; box-shadow: 0 4px 12px rgba(37,211,102,.35); white-space: nowrap; opacity: 0; transform: translateY(8px); transition: all .3s ease; pointer-events: none; }
+    .floating-whatsapp:hover .wa-badge { opacity: 1; transform: translateY(0); }
+    .floating-whatsapp .wa-btn { width: 60px; height: 60px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.45); transition: transform .25s ease, box-shadow .25s ease; cursor: pointer; text-decoration: none; }
+    .floating-whatsapp .wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.6); }
+    .floating-whatsapp .wa-btn svg { width: 32px; height: 32px; fill: #fff; }
+    @keyframes wa-pulse { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)} 50%{box-shadow:0 4px 30px rgba(37,211,102,.8)} }
+    .floating-whatsapp .wa-btn { animation: wa-pulse 2s ease-in-out infinite; }
+    .floating-whatsapp .wa-btn:hover { animation: none; }
+
+    /* ====== CONTACT ENHANCEMENTS ====== */
+    .contact-quick-links { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .contact-quick-links a { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all .2s ease; }
+    .wa-quick-btn { background: linear-gradient(135deg, #25D366, #128C7E); color: #fff; }
+    .wa-quick-btn:hover { background: linear-gradient(135deg, #22c55e, #0f766e); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,.4); }
+    .wa-quick-btn svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
+    .skype-quick-btn { background: #e8f4fd; color: #0b7dc3; border: 1.5px solid #b3d7f5; }
+    .skype-quick-btn:hover { background: #d0ebff; transform: translateY(-2px); }
+    .skype-quick-btn svg { width: 22px; height: 22px; fill: #0b7dc3; flex-shrink: 0; }
+    .contact-wa-item { background: rgba(37,211,102,.08); border: 1px solid rgba(37,211,102,.25); border-radius: 8px; padding: 10px 10px 10px 8px; margin-bottom: 14px; }
+    .contact-wa-item .wa-icon-inline { display: flex; align-items: center; }
+    .contact-wa-item .wa-icon-inline svg { width: 22px; height: 22px; }
+    .contact-wa-item .detail { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+    .contact-info-wa-box h4 { color: #15803d; font-size: 15px; margin: 0 0 10px 0; display: flex; align-items: center; gap: 8px; }
+    .contact-info-wa-box h4 svg { width: 20px; height: 20px; fill: #15803d; }
+    .wa-direct-link { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #25D366, #128C7E); color: #fff; padding: 10px 18px; border-radius: 8px; font-size: 15px; font-weight: 700; text-decoration: none; margin-bottom: 8px; transition: all .2s; }
+    .wa-direct-link:hover { background: linear-gradient(135deg, #22c55e, #0f766e); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(37,211,102,.4); }
+    .wa-direct-link svg { width: 20px; height: 20px; fill: #fff; }
+    .wa-note { font-size: 12px; color: #166534; opacity: .8; }
   </style>
 </head>
 <body>
@@ -624,17 +655,20 @@
         </div>
         <div class="contact-info" id="contactInfo">
           <h3 data-i18n="contact.info.title">Contact Information</h3>
-          <div class="contact-info-item">
-            <span class="icon">📞</span>
-            <div class="detail"><strong data-i18n="contact.info.phone">Phone / WhatsApp</strong><a href="tel:+8613632942782">+86 136 3294 2782</a></div>
+          <!-- WhatsApp — compact inline style -->
+          <div class="contact-info-item contact-wa-item">
+            <span class="icon wa-icon-inline">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
+            <div class="detail">
+              <strong data-i18n="contact.info.whatsapp">WhatsApp / 电话</strong>
+              <a href="https://wa.me/8613632942782?text=Hi%20Jack%2C%20I%20saw%20your%20ORICHALCUM%20B2B%20site.%20I%27m%20interested%20in%3A%20%5Bproduct%5D.%20Could%20you%20send%20me%20a%20quote%3F%20Thank%20you!" target="_blank" rel="noopener" style="color:#25D366;font-weight:700;" data-i18n="contact.info.whatsappnum">+86 136 3294 2782</a>
+              <span style="font-size:11px;color:#25D366;margin-left:6px;">✨ Chat Now</span>
+            </div>
           </div>
           <div class="contact-info-item">
             <span class="icon">💬</span>
             <div class="detail"><strong data-i18n="contact.info.wechat">WeChat</strong><span>13632942782</span></div>
-          </div>
-          <div class="contact-info-item">
-            <span class="icon">✉️</span>
-            <div class="detail"><strong data-i18n="contact.info.email">Email</strong><a href="mailto:jack.huang@orichalcum.cc">jack.huang@orichalcum.cc</a></div>
           </div>
           <div class="contact-info-item">
             <span class="icon">📍</span>
@@ -646,7 +680,7 @@
           </div>
           <div class="contact-info-item" style="margin-top:16px;padding:14px;background:var(--bg-card);border-radius:8px;border:1px solid var(--border)">
             <span class="icon">⏱</span>
-            <div class="detail"><strong data-i18n="contact.info.response">Response Time</strong><span data-i18n="contact.info.response_val">Typically within 2 hours during business hours (GMT+8)</span></div>
+            <div class="detail"><strong data-i18n="contact.info.response">Response Time</strong><span data-i18n="contact.info.response_val">WhatsApp: within 2h · Email: within 24h (GMT+8)</span></div>
           </div>
         </div>
       </div>
@@ -756,7 +790,7 @@
       'contact.success.alt':'Also reach us directly: jack.huang@orichalcum.cc | +86 136 3294 2782',
       'contact.err.name':'Please enter your name','contact.err.email':'Please enter a valid email','contact.err.company':'Please enter your company name',
       'contact.interest.default':'Select Product Interest','contact.interest.multiple':'Multiple Products',
-      'contact.info.title':'Contact Information','contact.info.phone':'Phone / WhatsApp','contact.info.wechat':'WeChat','contact.info.email':'Email','contact.info.address':'Factory Address','contact.info.contact':'Contact Person','contact.info.response':'Response Time','contact.info.response_val':'Typically within 2 hours during business hours (GMT+8)',
+      'contact.info.title':'Contact Information','contact.info.phone':'Phone / WhatsApp','contact.info.whatsapp':'WhatsApp / 电话','contact.info.whatsappnum':'+86 136 3294 2782','contact.info.wechat':'WeChat','contact.info.email':'Email','contact.info.address':'Factory Address','contact.info.contact':'Contact Person','contact.info.response':'Response Time','contact.info.response_val':'Typically within 2 hours during business hours (GMT+8)',
       'footer.tag':'Shan Tongren Technology (Shenzhen) Co., LTD','footer.rights':'All rights reserved.'
     },
     cn: {
@@ -798,7 +832,7 @@
       'contact.success.alt':'也可直接联系：jack.huang@orichalcum.cc | +86 136 3294 2782',
       'contact.err.name':'请输入姓名','contact.err.email':'请输入有效邮箱','contact.err.company':'请输入公司名称',
       'contact.interest.default':'选择感兴趣的产品','contact.interest.multiple':'多款产品',
-      'contact.info.title':'联系方式','contact.info.phone':'电话 / WhatsApp','contact.info.wechat':'微信','contact.info.email':'邮箱','contact.info.address':'工厂地址','contact.info.contact':'联系人','contact.info.response':'响应时间','contact.info.response_val':'工作时间（GMT+8）通常2小时内回复',
+      'contact.info.title':'联系方式','contact.info.phone':'电话 / WhatsApp','contact.info.whatsapp':'WhatsApp / 电话','contact.info.whatsappnum':'+86 136 3294 2782','contact.info.wechat':'微信','contact.info.email':'邮箱','contact.info.address':'工厂地址','contact.info.contact':'联系人','contact.info.response':'响应时间','contact.info.response_val':'工作时间（GMT+8）通常2小时内回复',
       'footer.tag':'善同仁科技（深圳）有限公司','footer.rights':'保留所有权利'
     },
     es: {
@@ -836,11 +870,12 @@
       'faq.q5':'¿Tienen certificaciones y garantía?','faq.a5':'CE, FCC, RoHS, REACH. 5ATM/IP68. Garantía 12 meses.',
       'contact.tag':'Contacto','contact.title':'Solicitar Cotización o Muestra',
       'contact.sub':'Cuéntenos su mercado, volumen y necesidades — respondemos en 24h.',
+      'contact.wa.line1':'Chatea por WhatsApp — Respuesta Rápida','contact.wa.line3':'Jack Huang · Director de Ventas ORICHALCUM',
       'contact.submit':'Enviar Consulta','contact.success.title':'¡Gracias!','contact.success.msg':'Consulta enviada. Responderemos en 24h.',
       'contact.success.alt':'Contáctenos directamente: jack.huang@orichalcum.cc | +86 136 3294 2782',
       'contact.err.name':'Ingrese su nombre','contact.err.email':'Ingrese un email válido','contact.err.company':'Ingrese su empresa',
       'contact.interest.default':'Seleccione Producto','contact.interest.multiple':'Múltiples Productos',
-      'contact.info.title':'Información de Contacto','contact.info.phone':'Teléfono / WhatsApp','contact.info.wechat':'WeChat','contact.info.email':'Email','contact.info.address':'Dirección Fábrica','contact.info.contact':'Persona de Contacto','contact.info.response':'Tiempo de Respuesta','contact.info.response_val':'Generalmente 2h en horario laboral (GMT+8)',
+      'contact.info.title':'Información de Contacto','contact.info.phone':'Teléfono / WhatsApp','contact.info.whatsapp':'WhatsApp / Teléfono','contact.info.whatsappnum':'+86 136 3294 2782','contact.info.wechat':'WeChat','contact.info.email':'Email','contact.info.address':'Dirección Fábrica','contact.info.contact':'Persona de Contacto','contact.info.response':'Tiempo de Respuesta','contact.info.response_val':'Generalmente 2h en horario laboral (GMT+8)',
       'footer.tag':'Shan Tongren Technology (Shenzhen) Co., LTD','footer.rights':'Todos los derechos reservados.'
     },
     ar: {
@@ -878,11 +913,12 @@
       'faq.q5':'هل لديكم شهادات وضمان؟','faq.a5':'نعم! CE, FCC, RoHS, REACH. تقارير 5ATM/IP68. ضمان 12 شهراً.',
       'contact.tag':'اتصل بنا','contact.title':'طلب عرض سعر أو عينة',
       'contact.sub':'أخبرنا عن سوقك المستهدف وحجم الطلب واحتياجات التخصيص — سنرد خلال 24 ساعة.',
+      'contact.wa.line1':'دردشة واتساب — أسرع استجابة','contact.wa.line3':'Jack Huang · مدير مبيعات ORICHALCUM',
       'contact.submit':'إرسال الاستفسار','contact.success.title':'شكراً!','contact.success.msg':'تم إرسال استفسارك. سنرد خلال 24 ساعة.',
       'contact.success.alt':'اتصل بنا مباشرة: jack.huang@orichalcum.cc | +86 136 3294 2782',
       'contact.err.name':'الرجاء إدخال الاسم','contact.err.email':'الرجاء إدخال بريد إلكتروني صحيح','contact.err.company':'الرجاء إدخال اسم الشركة',
       'contact.interest.default':'اختر المنتج المهتم به','contact.interest.multiple':'منتجات متعددة',
-      'contact.info.title':'معلومات الاتصال','contact.info.phone':'هاتف / واتساب','contact.info.wechat':'وي شات','contact.info.email':'البريد الإلكتروني','contact.info.address':'عنوان المصنع','contact.info.contact':'الشخص المسؤول','contact.info.response':'وقت الرد','contact.info.response_val':'عادة خلال ساعتين في ساعات العمل (GMT+8)',
+      'contact.info.title':'معلومات الاتصال','contact.info.phone':'هاتف / واتساب','contact.info.whatsapp':'واتساب / هاتف','contact.info.whatsappnum':'+86 136 3294 2782','contact.info.wechat':'وي شات','contact.info.email':'البريد الإلكتروني','contact.info.address':'عنوان المصنع','contact.info.contact':'الشخص المسؤول','contact.info.response':'وقت الرد','contact.info.response_val':'عادة خلال ساعتين في ساعات العمل (GMT+8)',
       'footer.tag':'شركة شان تونغرن للتكنولوجيا (شنتشن) المحدودة','footer.rights':'جميع الحقوق محفوظة'
     }
   };
@@ -907,6 +943,9 @@
       if (key && dict[key] !== undefined) opt.textContent = dict[key];
     });
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+    // Update floating WhatsApp tooltip dynamically
+    const waTooltip = document.getElementById('waTooltip');
+    if (waTooltip && dict['contact.wa.line1']) waTooltip.textContent = dict['contact.wa.line1'];
     if (lang === 'ar') { document.documentElement.dir = 'rtl'; document.documentElement.lang = 'ar'; }
     else { document.documentElement.dir = ''; document.documentElement.lang = lang === 'cn' ? 'zh' : lang; }
     // Update product modal if open
@@ -1015,5 +1054,13 @@
   console.log('🏭 ORICHALCUM B2B Website v2.0 — Loaded successfully');
   console.log('🔤 Languages: EN / 中文 / ES / AR | 🏷 Real product data active');
   </script>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <div class="floating-whatsapp">
+    <div class="wa-tooltip" id="waTooltip">Chat now — Jack · ORICHALCUM</div>
+    <a href="https://wa.me/8613632942782?text=Hi%20Jack%2C%20I%20saw%20your%20ORICHALCUM%20B2B%20site.%20I%27m%20interested%20in%3A%20%5Bproduct%5D.%20Could%20you%20send%20me%20a%20quote%3F%20Thank%20you!" target="_blank" rel="noopener" class="wa-btn" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
 </body>
 </html>
