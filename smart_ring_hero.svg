@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="50%" style="stop-color:#1a1510"/>
+      <stop offset="100%" style="stop-color:#0d0d0d"/>
+    </linearGradient>
+    <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#c9a84c;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <circle cx="960" cy="540" r="300" fill="url(#ringGlow)"/>
+  <!-- Ring shape -->
+  <ellipse cx="960" cy="540" rx="140" ry="160" fill="none" stroke="#c9a84c" stroke-width="8" opacity="0.6"/>
+  <ellipse cx="960" cy="540" rx="120" ry="140" fill="none" stroke="#c9a84c" stroke-width="3" opacity="0.4"/>
+  <circle cx="960" cy="540" r="12" fill="#c9a84c" opacity="0.8"/>
+  <text x="960" y="780" text-anchor="middle" fill="#c9a84c" font-size="28" font-family="sans-serif" font-weight="600" letter-spacing="3">SMART RING</text>
+  <text x="960" y="820" text-anchor="middle" fill="#666" font-size="14" font-family="sans-serif" letter-spacing="4">PRECISION WEARABLES</text>
+</svg>

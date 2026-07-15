@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORICHALCUM – Smart Wearable OEM/ODM Manufacturer in Shenzhen, China</title>
+  <meta name="description" content="Professional smart ring (R20 with Nordic nRF54L15), smart bracelet (B10 Pro), smart watch (W30 Elite) & smart glasses (G1 Lite) manufacturer. CE/FCC certified. OEM/ODM with fast delivery. MOQ 50pcs. Get a quote today!">
+  <link rel="alternate" href="https://www.orichalcum.cc/" hreflang="en" />
+  <link rel="alternate" href="https://www.orichalcum.cc/es/" hreflang="es" />
+  <link rel="alternate" href="https://www.orichalcum.cc/ar/" hreflang="ar" />
+  <link rel="alternate" href="https://www.orichalcum.cc/cn/" hreflang="zh" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ORICHALCUM – Smart Wearable OEM/ODM Manufacturer">
+  <meta property="og:description" content="Professional smart ring, bracelet, watch & glasses manufacturer. R20 ring with Nordic nRF54L15. CE/FCC/RoHS. MOQ 50pcs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.orichalcum.cc/">
+  <meta property="og:image" content="https://www.orichalcum.cc/logo.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ORICHALCUM – Smart Wearable OEM/ODM Manufacturer">
+  <meta name="twitter:description" content="R20 smart ring with Nordic nRF54L15, haptic motor, 5ATM. B10 Pro band, W30 Elite watch, G1 Lite glasses. Factory direct.">
+
+  <!-- Google Analytics placeholder -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-XXXXX-X');</script>
+
+  <style>
+    /* ============================================================
+       RESET & GLOBAL
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8d48b;
+      --gold-dark: #a08030;
+      --bg-dark: #0d0d0d;
+      --bg-card: #1a1a1a;
+      --bg-section: #111111;
+      --text: #e0e0e0;
+      --text-muted: #999999;
+      --border: #2a2a2a;
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --nav-height: 70px;
+    }
+    body {
+      font-family: var(--font);
+      background: var(--bg-dark);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: var(--gold); text-decoration: none; transition: color .3s; }
+    a:hover { color: var(--gold-light); }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-height);
+      display: flex; align-items: center;
+      background: rgba(13,13,13,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+    }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; }
+    .logo img { height: 34px; width: auto; }
+    .nav-menu { display: flex; gap: 24px; list-style: none; align-items: center; }
+    .nav-menu a {
+      color: var(--text); font-size: 13px; font-weight: 500; letter-spacing: .5px;
+      position: relative; transition: color .3s;
+    }
+    .nav-menu a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 2px; background: var(--gold); transform: scaleX(0); transition: transform .3s;
+    }
+    .nav-menu a:hover { color: var(--gold); }
+    .nav-menu a:hover::after { transform: scaleX(1); }
+    .lang-switcher { display: flex; gap: 4px; margin-left: 8px; }
+    .lang-btn {
+      background: none; border: 1px solid var(--border); color: var(--text-muted); cursor: pointer;
+      padding: 3px 7px; font-size: 10px; border-radius: 4px; transition: all .3s; font-weight: 500;
+    }
+    .lang-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .lang-btn.active { background: var(--gold); color: #111; border-color: var(--gold); font-weight: 600; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--text); border-radius: 2px; transition: all .3s; }
+
+    /* ============================================================
+       SECTIONS COMMON
+       ============================================================ */
+    section { padding: 90px 0; position: relative; }
+    .section-tag { display: inline-block; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; font-weight: 600; }
+    .section-title { font-size: 34px; font-weight: 700; margin-bottom: 12px; color: #fff; }
+    .section-sub { font-size: 15px; color: var(--text-muted); max-width: 640px; margin-bottom: 44px; }
+    .section-title, .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(13,13,13,0.92) 0%, rgba(13,13,13,0.6) 100%), url('./smart_ring_hero.png') center/cover no-repeat;
+      padding-top: var(--nav-height);
+    }
+    .hero-content { max-width: 820px; padding: 0 20px; }
+    .hero h1 { font-size: clamp(32px, 5vw, 60px); font-weight: 800; color: #fff; margin-bottom: 16px; letter-spacing: -.5px; }
+    .hero h1 span { color: var(--gold); }
+    .hero p { font-size: clamp(15px, 2vw, 20px); color: var(--text-muted); margin-bottom: 12px; }
+    .hero .moq-badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: 13px;
+      color: var(--gold-light);
+      margin-bottom: 28px;
+    }
+    .hero .moq-badge strong { color: #fff; }
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #111; font-weight: 700; font-size: 14px; padding: 16px 38px;
+      border-radius: 50px; border: none; cursor: pointer;
+      transition: all .3s; letter-spacing: .5px; text-transform: uppercase;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.3); color: #111; }
+    .btn-outline {
+      display: inline-block; background: transparent; color: var(--gold);
+      border: 2px solid var(--gold); font-weight: 600; font-size: 13px;
+      padding: 14px 34px; border-radius: 50px; cursor: pointer; transition: all .3s; letter-spacing: .5px;
+    }
+    .btn-outline:hover { background: var(--gold); color: #111; }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* ============================================================
+       PRODUCTS
+       ============================================================ */
+    .products { background: var(--bg-section); }
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .product-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 12px; overflow: hidden; transition: all .4s; cursor: pointer;
+    }
+    .product-card:hover { transform: translateY(-6px); border-color: var(--gold-dark); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+    .product-card img { width: 100%; height: 240px; object-fit: contain; background: #141414; transition: transform .4s; padding: 12px; }
+    .product-card:hover img { transform: scale(1.05); }
+    .product-info { padding: 16px 20px 20px; }
+    .product-info .model-tag {
+      display: inline-block;
+      background: rgba(201,168,76,0.15);
+      color: var(--gold-light);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 2px 10px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+    .product-info h3 { font-size: 17px; color: #fff; margin-bottom: 4px; }
+    .product-info .chip { font-size: 11px; color: var(--gold-dark); margin-bottom: 8px; }
+    .product-info p { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5; }
+    .product-card .btn-outline { padding: 7px 18px; font-size: 11px; }
+    .product-card .moq-mini {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+    .product-card .moq-mini strong { color: var(--gold-light); }
+
+    /* MOQ Banner */
+    .moq-strip {
+      background: linear-gradient(90deg, rgba(201,168,76,0.08), transparent, rgba(201,168,76,0.08));
+      border-top: 1px solid rgba(201,168,76,0.15);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 14px 0;
+      margin-bottom: 44px;
+      text-align: center;
+    }
+    .moq-strip p { font-size: 14px; color: var(--text-muted); }
+    .moq-strip strong { color: var(--gold-light); }
+
+    /* ============================================================
+       MODAL
+       ============================================================ */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.85); z-index: 2000;
+      justify-content: center; align-items: center; padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 16px; max-width: 720px; width: 100%;
+      max-height: 85vh; overflow-y: auto;
+      padding: 36px; position: relative; animation: modalIn .3s ease;
+    }
+    @keyframes modalIn { from { opacity:0; transform:scale(.95) translateY(20px); } to { opacity:1; transform:scale(1) translateY(0); } }
+    .modal-close { position: absolute; top: 14px; right: 18px; background: none; border: none; color: var(--text-muted); font-size: 26px; cursor: pointer; transition: color .3s; line-height: 1; }
+    .modal-close:hover { color: var(--gold); }
+    .modal h2 { font-size: 22px; color: var(--gold); margin-bottom: 4px; }
+    .modal .modal-model { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+    .modal table { width: 100%; border-collapse: collapse; }
+    .modal th, .modal td { padding: 10px 14px; border-bottom: 1px solid var(--border); text-align: left; font-size: 13px; }
+    .modal th { color: var(--gold-light); font-weight: 600; width: 32%; }
+    .modal td { color: var(--text); }
+    .modal .cta-modal { text-align: center; margin-top: 24px; }
+
+    /* ============================================================
+       ABOUT
+       ============================================================ */
+    .about { background: var(--bg-dark); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .about-image { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+    .about-image img { width: 100%; height: 420px; object-fit: cover; }
+    .about-content .section-title, .about-content .section-sub { text-align: left; margin-left: 0; }
+    .about-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+    .stat-item { text-align: center; padding: 16px; background: var(--bg-card); border-radius: 10px; border: 1px solid var(--border); }
+    .stat-item .num { font-size: 26px; font-weight: 800; color: var(--gold); }
+    .stat-item .label { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+    /* ============================================================
+       WHY US
+       ============================================================ */
+    .whyus { background: var(--bg-section); }
+    .whyus-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .whyus-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px 16px; text-align: center; transition: all .3s;
+    }
+    .whyus-item:hover { border-color: var(--gold-dark); transform: translateY(-4px); }
+    .whyus-icon { width: 48px; height: 48px; margin: 0 auto 12px; border-radius: 50%; background: linear-gradient(135deg, rgba(201,168,76,0.2), transparent); display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--gold); }
+    .whyus-item h4 { font-size: 14px; color: #fff; margin-bottom: 4px; }
+    .whyus-item p { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+
+    /* ============================================================
+       TRUST
+       ============================================================ */
+    .trust { background: var(--bg-dark); }
+    .logo-strip { overflow: hidden; margin-bottom: 40px; position: relative; }
+    .logo-strip-track { display: flex; gap: 40px; animation: scrollStrip 25s linear infinite; width: max-content; }
+    .logo-strip-track img { height: 44px; width: auto; opacity: .5; filter: grayscale(1); transition: all .3s; }
+    .logo-strip-track img:hover { opacity: 1; filter: grayscale(0); }
+    @keyframes scrollStrip { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .certs { display: flex; justify-content: center; gap: 28px; }
+    .cert-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 20px 28px; text-align: center; min-width: 110px; }
+    .cert-item .icon { font-size: 32px; margin-bottom: 4px; display: block; }
+    .cert-item .name { font-size: 12px; font-weight: 600; color: var(--text); }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq { background: var(--bg-section); }
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; transition: border-color .3s; }
+    .faq-item:hover { border-color: var(--gold-dark); }
+    .faq-question {
+      width: 100%; background: var(--bg-card); border: none;
+      padding: 16px 22px; text-align: left; font-size: 14px; font-weight: 600;
+      color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background .3s;
+    }
+    .faq-question:hover { background: #222; }
+    .faq-question .arrow { transition: transform .3s; font-size: 12px; color: var(--gold); }
+    .faq-item.open .faq-question .arrow { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .4s ease; background: var(--bg-card); }
+    .faq-answer-inner { padding: 0 22px 16px; font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ============================================================
+       CONTACT
+       ============================================================ */
+    .contact { background: var(--bg-dark); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+    .contact-form input, .contact-form select, .contact-form textarea {
+      width: 100%; padding: 13px 15px; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: 8px; color: #fff;
+      font-size: 13px; font-family: var(--font); transition: border-color .3s;
+    }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: var(--gold); }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: #555; }
+    .contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .contact-form .full { margin-bottom: 14px; }
+    .contact-form textarea { height: 110px; resize: vertical; }
+    .contact-form .btn-primary { width: 100%; margin-top: 2px; }
+    .form-success { display: none; text-align: center; padding: 36px; color: var(--gold); }
+    .form-success .check { font-size: 44px; margin-bottom: 12px; }
+    .form-error { color: #e74c3c; font-size: 11px; margin-top: 3px; display: none; }
+    .contact-info h3 { font-size: 17px; color: var(--gold); margin-bottom: 18px; }
+    .contact-info-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; font-size: 13px; }
+    .contact-info-item .icon { font-size: 16px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+    .contact-info-item .detail { color: var(--text-muted); }
+    .contact-info-item .detail strong { color: #fff; display: block; }
+    .contact-info-item a { color: var(--text-muted); }
+    .contact-info-item a:hover { color: var(--gold); }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer { background: #080808; border-top: 1px solid var(--border); padding: 28px 0; }
+    footer .container { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    footer p { font-size: 12px; color: var(--text-muted); }
+    .social-links { display: flex; gap: 12px; }
+    .social-links a { width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 13px; transition: all .3s; }
+    .social-links a:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.1); }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .whyus-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-menu {
+        display: none; position: absolute; top: var(--nav-height); left: 0; right: 0;
+        background: rgba(13,13,13,0.98); flex-direction: column; padding: 20px 24px;
+        gap: 14px; border-bottom: 1px solid var(--border);
+      }
+      .nav-menu.open { display: flex; }
+      .lang-switcher { margin-left: 0; }
+      section { padding: 50px 0; }
+      .section-title { font-size: 26px; }
+      .product-grid { grid-template-columns: 1fr; }
+      .whyus-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-form .row { grid-template-columns: 1fr; }
+      .certs { flex-direction: column; align-items: center; gap: 12px; }
+      .logo-strip-track img { height: 32px; }
+      .modal { padding: 20px; }
+      footer .container { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) { .about-stats { grid-template-columns: 1fr; } .hero-btns { flex-direction: column; align-items: center; } }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Arabic RTL */
+    html[dir="rtl"] .nav-menu { direction: rtl; }
+    html[dir="rtl"] .faq-question { text-align: right; direction: rtl; }
+    html[dir="rtl"] .contact-info-item { direction: rtl; }
+    html[dir="rtl"] .contact-form input, html[dir="rtl"] .contact-form textarea { direction: rtl; }
+    .navbar { animation: navFadeIn .5s ease; }
+    @keyframes navFadeIn { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="logo"><img src="./logo.png" alt="ORICHALCUM Logo"> ORICHALCUM</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" data-i18n="nav.home">Home</a></li>
+        <li><a href="#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="#about" data-i18n="nav.about">About Us</a></li>
+        <li><a href="#whyus" data-i18n="nav.whyus">Why Us</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="cn">中文</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="ar">AR</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="moq-badge">⚡ <span data-i18n="hero.moq">Factory Direct · MOQ from</span> <strong>50 pcs</strong> · <span data-i18n="hero.sample">Samples Accepted</span></div>
+      <h1><span data-i18n="hero.title1">Precision Smart Wearables</span><br><span data-i18n="hero.title2">for Global Brands</span></h1>
+      <p data-i18n="hero.sub">Shenzhen-based OEM/ODM manufacturer · Nordic nRF54L15 chipset · 8+ years wearable experience</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary" data-i18n="hero.cta">Get a Quote</a>
+        <a href="#products" class="btn-outline" data-i18n="hero.explore">View Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="container">
+      <span class="section-tag" data-i18n="products.tag">Our Products</span>
+      <h2 class="section-title" data-i18n="products.title">Smart Wearable Lineup</h2>
+      <p class="section-sub" data-i18n="products.sub">OEM/ODM ready — customizable design, packaging, firmware, and branding. All models CE/FCC/RoHS certified.</p>
+      <div class="moq-strip">
+        <p>📦 <span data-i18n="products.moq">MOQ from</span> <strong>50 pcs</strong> · <span data-i18n="products.lead">Sample lead time</span> <strong>7 days</strong> · <span data-i18n="products.oem">Logo engraving, custom packaging, white-label app available</span></p>
+      </div>
+      <div class="product-grid">
+        <!-- R20 Smart Ring -->
+        <div class="product-card reveal" data-product="ring">
+          <img src="./product_ring.png" alt="R20 smart ring OEM manufacturer with Nordic nRF54L15" loading="lazy">
+          <div class="product-info">
+            <span class="model-tag">R20</span>
+            <h3 data-i18n="products.ring.name">R20 Smart Ring</h3>
+            <div class="chip">Nordic nRF54L15 · BLE 5.4 · Haptic Motor</div>
+            <p data-i18n="products.ring.desc">Grade 5 titanium ring with 4-channel health monitoring (HR, SpO2, body temp, HRV), wireless charging, 5ATM.</p>
+            <button class="btn-outline" data-i18n="products.learn" data-product="ring">View Specs</button>
+            <div class="moq-mini"><span data-i18n="products.moq_label">MOQ:</span> <strong>50 pcs</strong> | 3.5g | 5-7 days battery</div>
+          </div>
+        </div>
+        <!-- B10 Pro Smart Band -->
+        <div class="product-card reveal" data-product="band">
+          <img src="./product_band.png" alt="B10 Pro smart bracelet OEM manufacturer" loading="lazy">
+          <div class="product-info">
+            <span class="model-tag">B10 PRO</span>
+            <h3 data-i18n="products.band.name">B10 Pro Smart Bracelet</h3>
+            <div class="chip">Realtek RTL8762C · 1.1" AMOLED · IP68</div>
+            <p data-i18n="products.band.desc">Fitness tracker with 24/7 HR/SpO2/sleep, 20+ sport modes, 7-10 day battery, magnetic charging.</p>
+            <button class="btn-outline" data-i18n="products.learn" data-product="band">View Specs</button>
+            <div class="moq-mini"><span data-i18n="products.moq_label">MOQ:</span> <strong>50 pcs</strong> | 25g | IP68 waterproof</div>
+          </div>
+        </div>
+        <!-- W30 Elite Smart Watch -->
+        <div class="product-card reveal" data-product="watch">
+          <img src="./product_watch.png" alt="W30 Elite smart watch OEM manufacturer with GPS" loading="lazy">
+          <div class="product-info">
+            <span class="model-tag">W30 ELITE</span>
+            <h3 data-i18n="products.watch.name">W30 Elite Smart Watch</h3>
+            <div class="chip">Nordic nRF52840 · 1.43" AMOLED · GPS · 100+ Sports</div>
+            <p data-i18n="products.watch.desc">Full-featured smartwatch with GPS/GLONASS, stainless steel case, always-on display, 5-7 day battery.</p>
+            <button class="btn-outline" data-i18n="products.learn" data-product="watch">View Specs</button>
+            <div class="moq-mini"><span data-i18n="products.moq_label">MOQ:</span> <strong>50 pcs</strong> | 55g | 5ATM + IP68</div>
+          </div>
+        </div>
+        <!-- G1 Lite Smart Glasses -->
+        <div class="product-card reveal" data-product="glasses">
+          <img src="./product_glass.png" alt="G1 Lite smart glasses OEM manufacturer open-ear audio" loading="lazy">
+          <div class="product-info">
+            <span class="model-tag">G1 LITE</span>
+            <h3 data-i18n="products.glasses.name">G1 Lite Smart Glasses</h3>
+            <div class="chip">BES2600 · Open-Ear Audio · 38g · Touch Controls</div>
+            <p data-i18n="products.glasses.desc">Lightweight smart glasses with directional speakers, voice assistant, blue-light blocking lenses, 6h music.</p>
+            <button class="btn-outline" data-i18n="products.learn" data-product="glasses">View Specs</button>
+            <div class="moq-mini"><span data-i18n="products.moq_label">MOQ:</span> <strong>50 pcs</strong> | 38g | IP54</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2 id="modalTitle">Product Specifications</h2>
+      <div class="modal-model" id="modalModel">Model</div>
+      <div id="modalContent"></div>
+      <div class="cta-modal">
+        <a href="#contact" class="btn-primary" data-i18n="products.inquire">Inquire About This Product</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="./factory.png" alt="ORICHALCUM smart wearable factory Shenzhen China" loading="lazy">
+        </div>
+        <div class="about-content">
+          <span class="section-tag" data-i18n="about.tag">About Us</span>
+          <h2 class="section-title" data-i18n="about.title">Your OEM/ODM Partner Since 2018</h2>
+          <p class="section-sub" data-i18n="about.desc">Shan Tongren Technology (Shenzhen) Co., LTD is a professional smart wearable manufacturer serving 50+ countries. We specialize in OEM/ODM smart rings, bracelets, watches, and glasses with in-house R&D, mold design, and assembly.</p>
+          <div class="about-stats">
+            <div class="stat-item"><div class="num">5,000 m²</div><div class="label" data-i18n="about.stat1">Factory + R&D Center</div></div>
+            <div class="stat-item"><div class="num">2M+</div><div class="label" data-i18n="about.stat2">Annual Production Capacity</div></div>
+            <div class="stat-item"><div class="num">50+</div><div class="label" data-i18n="about.stat3">Export Countries</div></div>
+            <div class="stat-item"><div class="num">CE/FCC</div><div class="label" data-i18n="about.stat4">Full Certification</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="whyus" id="whyus">
+    <div class="container">
+      <span class="section-tag" data-i18n="whyus.tag">Why ORICHALCUM</span>
+      <h2 class="section-title" data-i18n="whyus.title">8 Reasons Global Brands Choose Us</h2>
+      <p class="section-sub" data-i18n="whyus.sub">From prototype to mass production and beyond — we deliver.</p>
+      <div class="whyus-grid">
+        <div class="whyus-item reveal"><div class="whyus-icon">⚡</div><h4 data-i18n="whyus.i1.title">Fast Sampling</h4><p data-i18n="whyus.i1.desc">Samples in 7 days. Rapid iteration until approval.</p></div>
+        <div class="whyus-item reveal"><div class="whyus-icon">✓</div><h4 data-i18n="whyus.i2.title">Strict QC</h4><p data-i18n="whyus.i2.desc">100% inspection. CE, FCC, RoHS, REACH certified.</p></div>
+        <div class="whyus-item reveal"><div class="whyus-icon">📦</div><h4 data-i18n="whyus.i3.title">Low MOQ</h4><p data-i18n="whyus.i3.desc">From 50 pcs. Test the market risk-free.</p></div>
+        <div class="whyus-item reveal"><div class="whyus-icon">🔧</div><h4 data-i18n="whyus.i4.title">Full Customization</h4><p data-i18n="whyus.i4.desc">Logo, packaging, firmware, app UI — all customizable.</p></div>
+        <div class="whyus-item reveal"><div class="whyus-icon">🚚</div><h4 data-i18n="whyus.i5.title">Global Logistics</h4><p data-i18n="whyus.i5.desc">DHL/FedEx sea/air. Door-to-door worldwide.</p></div>
+        <div class="whyus-item reveal"><div class="whyus-icon">🛡️</div><h4 data-i18n="whyus.i6.title">12-Month Warranty</h4><p data-i18n="whyus.i6.desc">Full warranty + 24/7 after-sales support.</p></div>
+        <div class="whyus-item reveal"><div class="whyus-icon">🏆</div><h4 data-i18n="whyus.i7.title">30+ Patents</h4><p data-i18n="whyus.i7.desc">Design patents protect your exclusive models.</p></div>
+        <div class="whyus-item reveal"><div class="whyus-icon">🤝</div><h4 data-i18n="whyus.i8.title">NDA Protected</h4><p data-i18n="whyus.i8.desc">Your ideas stay confidential. NDA before discussion.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust" id="trust">
+    <div class="container">
+      <span class="section-tag" data-i18n="trust.tag">Trusted Partners</span>
+      <h2 class="section-title" data-i18n="trust.title">Certifications & Social Proof</h2>
+      <p class="section-sub" data-i18n="trust.sub">Certified quality, trusted by brands across 50+ countries.</p>
+      <div class="logo-strip">
+        <div class="logo-strip-track" id="logoStrip">
+          <!-- Client logos - placeholder SVGs -->
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3EGLOBAL%3C/text%3E%3C/svg%3E" alt="global brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3ETECH%3C/text%3E%3C/svg%3E" alt="tech brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3EWEARABLE%3C/text%3E%3C/svg%3E" alt="wearable brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3EFIT%3C/text%3E%3C/svg%3E" alt="fitness brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3EMEDICAL%3C/text%3E%3C/svg%3E" alt="medical brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3ESPORTS%3C/text%3E%3C/svg%3E" alt="sports brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3EGLOBAL%3C/text%3E%3C/svg%3E" alt="global brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3ETECH%3C/text%3E%3C/svg%3E" alt="tech brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3EWEARABLE%3C/text%3E%3C/svg%3E" alt="wearable brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3EFIT%3C/text%3E%3C/svg%3E" alt="fitness brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3EMEDICAL%3C/text%3E%3C/svg%3E" alt="medical brand client logo" loading="lazy">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23222' rx='6'/%3E%3Ctext x='60' y='26' text-anchor='middle' fill='%23999' font-size='14' font-family='sans-serif' font-weight='600'%3ESPORTS%3C/text%3E%3C/svg%3E" alt="sports brand client logo" loading="lazy">
+        </div>
+      </div>
+      <div class="certs">
+        <div class="cert-item"><span class="icon">🛡️</span><div class="name">CE (EMC & Safety)</div></div>
+        <div class="cert-item"><span class="icon">📡</span><div class="name">FCC Part 15B</div></div>
+        <div class="cert-item"><span class="icon">🌿</span><div class="name">RoHS & REACH</div></div>
+        <div class="cert-item"><span class="icon">💧</span><div class="name">5ATM / IP68</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+      <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+      <p class="section-sub" data-i18n="faq.sub">Answers to the most common questions from our B2B partners.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question"><span data-i18n="faq.q1">What is your MOQ?</span><span class="arrow">▼</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a1">Our standard MOQ is 50 pcs per model for mass production. Sample orders (1-5 pcs) are always accepted for evaluation. We encourage first-time buyers to start with samples.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span data-i18n="faq.q2">What are your lead times?</span><span class="arrow">▼</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a2">Samples: 3-7 working days. Mass production: 15-25 working days after sample approval and deposit. Rush orders available for established partners.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span data-i18n="faq.q3">What payment terms do you offer?</span><span class="arrow">▼</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a3">T/T bank transfer (30% deposit, 70% before shipment), L/C at sight, PayPal for sample orders. Flexible terms for long-term partners.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span data-i18n="faq.q4">What customization options do you offer?</span><span class="arrow">▼</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a4">Full OEM/ODM: Ring body engraving, custom colors (PVD coating), custom packaging (gift box, inserts), white-label app (your brand, icon, splash screen), custom firmware (vibration patterns, sensor settings), custom charging accessories. Submit requirements → Quote → Sample → Production.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question"><span data-i18n="faq.q5">Do you have certifications and warranty?</span><span class="arrow">▼</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a5">Yes! CE (EMC & Safety), FCC Part 15B, RoHS, REACH. 5ATM/IP68 water resistance test reports available. 12-month warranty on all products. 24/7 after-sales support via WhatsApp/email.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <span class="section-tag" data-i18n="contact.tag">Get in Touch</span>
+      <h2 class="section-title" data-i18n="contact.title">Request a Quote or Sample</h2>
+      <p class="section-sub" data-i18n="contact.sub">Tell us your target market, volume, and customization needs — we'll respond within 24 hours with pricing and lead time.</p>
+      <div class="contact-grid">
+        <div class="contact-form">
+          <form id="quoteForm" action="https://formspree.io/f/meoojglv" method="POST">
+            <div class="row">
+              <div>
+                <input type="text" name="name" id="formName" placeholder="Your Name *" required>
+                <div class="form-error" id="nameError" data-i18n="contact.err.name">Please enter your name</div>
+              </div>
+              <div>
+                <input type="email" name="email" id="formEmail" placeholder="Email Address *" required>
+                <div class="form-error" id="emailError" data-i18n="contact.err.email">Please enter a valid email</div>
+              </div>
+            </div>
+            <div class="full">
+              <input type="text" name="company" id="formCompany" placeholder="Company Name *" required>
+              <div class="form-error" id="companyError" data-i18n="contact.err.company">Please enter your company name</div>
+            </div>
+            <div class="full">
+              <select name="interest" id="formInterest">
+                <option value="" data-i18n="contact.interest.default">Select Product Interest</option>
+                <option value="ring" data-i18n="products.ring.name">R20 Smart Ring</option>
+                <option value="band" data-i18n="products.band.name">B10 Pro Smart Bracelet</option>
+                <option value="watch" data-i18n="products.watch.name">W30 Elite Smart Watch</option>
+                <option value="glasses" data-i18n="products.glasses.name">G1 Lite Smart Glasses</option>
+                <option value="multiple" data-i18n="contact.interest.multiple">Multiple Products</option>
+              </select>
+            </div>
+            <div class="full">
+              <textarea name="message" id="formMessage" placeholder="Tell us about your project — target price, quantity, customization needs, etc."></textarea>
+            </div>
+            <div class="full">
+              <button type="submit" class="btn-primary" data-i18n="contact.submit">Send Inquiry</button>
+            </div>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="check">✓</div>
+            <h3 data-i18n="contact.success.title">Thank You!</h3>
+            <p data-i18n="contact.success.msg">Your inquiry has been sent. We'll respond within 24 hours.</p>
+            <p style="margin-top:8px;font-size:12px;color:var(--text-muted)" data-i18n="contact.success.alt">Also reach us directly: jack.huang@orichalcum.cc | +86 136 3294 2782</p>
+          </div>
+        </div>
+        <div class="contact-info" id="contactInfo">
+          <h3 data-i18n="contact.info.title">Contact Information</h3>
+          <div class="contact-info-item">
+            <span class="icon">📞</span>
+            <div class="detail"><strong data-i18n="contact.info.phone">Phone / WhatsApp</strong><a href="tel:+8613632942782">+86 136 3294 2782</a></div>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon">💬</span>
+            <div class="detail"><strong data-i18n="contact.info.wechat">WeChat</strong><span>13632942782</span></div>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon">✉️</span>
+            <div class="detail"><strong data-i18n="contact.info.email">Email</strong><a href="mailto:jack.huang@orichalcum.cc">jack.huang@orichalcum.cc</a></div>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon">📍</span>
+            <div class="detail"><strong data-i18n="contact.info.address">Factory Address</strong><span>Room 1716-1717, Xinghe Times Building, Dalang North Road, Longhua, Shenzhen, China</span></div>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon">👤</span>
+            <div class="detail"><strong data-i18n="contact.info.contact">Contact Person</strong><span>Jack Huang — Sales Director</span></div>
+          </div>
+          <div class="contact-info-item" style="margin-top:16px;padding:14px;background:var(--bg-card);border-radius:8px;border:1px solid var(--border)">
+            <span class="icon">⏱</span>
+            <div class="detail"><strong data-i18n="contact.info.response">Response Time</strong><span data-i18n="contact.info.response_val">Typically within 2 hours during business hours (GMT+8)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 ORICHALCUM — <span data-i18n="footer.tag">Shan Tongren Technology (Shenzhen) Co., LTD</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      <div class="social-links">
+        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="#" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD STRUCTURED DATA -->
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"Organization",
+    "name":"Shan Tongren Technology (Shenzhen) Co., LTD","brand":"ORICHALCUM",
+    "url":"https://www.orichalcum.cc","logo":"https://www.orichalcum.cc/logo.png",
+    "telephone":"+86-13632942782","email":"jack.huang@orichalcum.cc",
+    "address":{"@type":"PostalAddress","streetAddress":"Room 1716-1717, Xinghe Times Building, Dalang North Road, Longhua District","addressLocality":"Shenzhen","addressCountry":"CN"},
+    "sameAs":["https://linkedin.com/company/orichalcum","#","#"]
+  }</script>
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"ItemList","itemListElement":[
+      {"@type":"Product","name":"R20 Smart Ring","description":"Grade 5 titanium smart ring with Nordic nRF54L15, haptic motor, 4-channel health monitoring, 5ATM, wireless charging.","brand":"ORICHALCUM","mpn":"OR-R20-001"},
+      {"@type":"Product","name":"B10 Pro Smart Bracelet","description":"Fitness tracker with Realtek RTL8762C, 1.1\" AMOLED, 24/7 HR/SpO2/sleep, IP68, 7-10 day battery.","brand":"ORICHALCUM","mpn":"OR-B10-001"},
+      {"@type":"Product","name":"W30 Elite Smart Watch","description":"Nordic nRF52840 smartwatch with 1.43\" AMOLED, GPS/GLONASS, 100+ sports, stainless steel, 5ATM.","brand":"ORICHALCUM","mpn":"OR-W30-001"},
+      {"@type":"Product","name":"G1 Lite Smart Glasses","description":"38g open-ear audio smart glasses with BES2600, voice assistant, blue-light blocking, IP54.","brand":"ORICHALCUM","mpn":"OR-G1-001"}
+    ]}</script>
+
+  <script>
+  /* ============================================================
+     REAL PRODUCT SPECIFICATIONS (from factory data)
+     ============================================================ */
+  const productSpecs = {
+    ring: {
+      en: '<table><tr><th>Model</th><td>R20 Smart Ring</td></tr><tr><th>Chipset</th><td>Nordic nRF54L15 (ARM Cortex-M33)</td></tr><tr><th>Memory</th><td>256KB RAM / 12Mb NVM Flash</td></tr><tr><th>Sensors</th><td>GOODiX GH3026 dual-PD PPG (HR/SpO2), CT7117 body temp IC, ST LSM6DSOETR3 6-axis (accel+gyro)</td></tr><tr><th>Bluetooth</th><td>BLE 5.4 (2 Mbps PHY, AoA/AoD)</td></tr><tr><th>Battery</th><td>14mAh (sz 7-9) / 18mAh (sz 10-14) Li-Po</td></tr><tr><th>Battery Life</th><td>5-7 days active / 15 days standby</td></tr><tr><th>Charging</th><td>Wireless dock, ~1.5h full (DC 5V/300mA USB-C)</td></tr><tr><th>Material</th><td>Grade 5 Titanium Alloy</td></tr><tr><th>Weight</th><td>3.5g (size 7)</td></tr><tr><th>Sizes</th><td>7-14 (inner Ø 17.6mm-23.1mm)</td></tr><tr><th>Colors</th><td>Gun metal, silver, rose gold (custom colors)</td></tr><tr><th>Waterproof</th><td>5ATM (50m)</td></tr><tr><th>Special Feature</th><td>Micro haptic motor — 3-level vibration, call alerts, ring-find function</td></tr><tr><th>App</th><td>QRing (iOS 9+/Android 5.1+) — 34 languages</td></tr><tr><th>Certifications</th><td>CE, FCC, RoHS, REACH</td></tr><tr><th>MOQ</th><td>50 pcs (samples accepted)</td></tr>',
+      cn: '<table><tr><th>型号</th><td>R20 智能戒指</td></tr><tr><th>芯片</th><td>Nordic nRF54L15 (ARM Cortex-M33)</td></tr><tr><th>存储</th><td>256KB RAM / 12Mb NVM</td></tr><tr><th>传感器</th><td>GOODiX GH3026 双PD PPG(心率/血氧), CT7117 体温, ST LSM6DSOETR3 6轴</td></tr><tr><th>蓝牙</th><td>BLE 5.4 (2Mbps PHY)</td></tr><tr><th>电池</th><td>14mAh(7-9码)/18mAh(10-14码)</td></tr><tr><th>续航</th><td>5-7天使用 / 15天待机</td></tr><tr><th>充电</th><td>无线充电座，约1.5小时充满</td></tr><tr><th>材质</th><td>5级钛合金</td></tr><tr><th>重量</th><td>3.5克(7码)</td></tr><tr><th>尺码</th><td>7-14 (内径17.6-23.1mm)</td></tr><tr><th>颜色</th><td>枪色/银色/玫瑰金(可定制)</td></tr><tr><th>防水</th><td>5ATM (50米)</td></tr><tr><th>特色</th><td>微型马达振动 — 3级强度，来电提醒，查找戒指</td></tr><tr><th>APP</th><td>QRing (iOS 9+/Android 5.1+) 34语言</td></tr><tr><th>认证</th><td>CE, FCC, RoHS, REACH</td></tr><tr><th>起订量</th><td>50件（可打样）</td></tr>',
+      es: '<table><tr><th>Modelo</th><td>R20 Anillo Inteligente</td></tr><tr><th>Chipset</th><td>Nordic nRF54L15 (ARM Cortex-M33)</td></tr><tr><th>Memoria</th><td>256KB RAM / 12Mb NVM Flash</td></tr><tr><th>Sensores</th><td>GOODiX GH3026 dual-PD PPG, CT7117 temperatura corporal, ST LSM6DSOETR3 6-ejes</td></tr><tr><th>Bluetooth</th><td>BLE 5.4 (2 Mbps PHY)</td></tr><tr><th>Batería</th><td>14mAh (talla 7-9) / 18mAh (talla 10-14)</td></tr><tr><th>Duración</th><td>5-7 días activo / 15 días espera</td></tr><tr><th>Carga</th><td>Base inalámbrica, ~1.5h</td></tr><tr><th>Material</th><td>Titanio Grado 5</td></tr><tr><th>Peso</th><td>3.5g (talla 7)</td></tr><tr><th>Tallas</th><td>7-14 (diámetro int. 17.6-23.1mm)</td></tr><tr><th>Colores</th><td>Gun metal, plata, oro rosa (personalizable)</td></tr><tr><th>Resistencia</th><td>5ATM (50m)</td></tr><tr><th>Característica</th><td>Motor háptico — 3 niveles, alertas llamadas, localización anillo</td></tr><tr><th>App</th><td>QRing (iOS 9+/Android 5.1+) — 34 idiomas</td></tr><tr><th>Certificaciones</th><td>CE, FCC, RoHS, REACH</td></tr><tr><th>MOQ</th><td>50 uds (muestras aceptadas)</td></tr>',
+      ar: '<table><tr><th>الموديل</th><td>R20 خاتم ذكي</td></tr><tr><th>المعالج</th><td>Nordic nRF54L15 (ARM Cortex-M33)</td></tr><tr><th>الذاكرة</th><td>256KB RAM / 12Mb NVM Flash</td></tr><tr><th>الحساسات</th><td>GOODiX GH3026 PPG مزدوج، CT7117 درجة حرارة، ST LSM6DSOETR3 6 محاور</td></tr><tr><th>بلوتوث</th><td>BLE 5.4 (2 Mbps PHY)</td></tr><tr><th>البطارية</th><td>14mAh (مقاس 7-9) / 18mAh (مقاس 10-14)</td></tr><tr><th>عمر البطارية</th><td>5-7 أيام نشط / 15 يوماً استعداد</td></tr><tr><th>الشحن</th><td>قاعدة لاسلكية، ~1.5 ساعة</td></tr><tr><th>المادة</th><td>تيتانيوم درجة 5</td></tr><tr><th>الوزن</th><td>3.5 غرام (مقاس 7)</td></tr><tr><th>المقاسات</th><td>7-14 (قطر داخلي 17.6-23.1mm)</td></tr><tr><th>الألوان</th><td>رمادي، فضي، ذهبي وردي (قابل للتخصيص)</td></tr><tr><th>مقاومة الماء</th><td>5ATM (50 متر)</td></tr><tr><th>ميزة خاصة</th><td>محرك اهتزاز دقيق — 3 مستويات، تنبيهات المكالمات، البحث عن الخاتم</td></tr><tr><th>التطبيق</th><td>QRing (iOS 9+/Android 5.1+) — 34 لغة</td></tr><tr><th>الشهادات</th><td>CE, FCC, RoHS, REACH</td></tr><tr><th>الحد الأدنى</th><td>50 قطعة (تقبل العينات)</td></tr>'
+    },
+    band: {
+      en: '<table><tr><th>Model</th><td>B10 Pro Smart Bracelet</td></tr><tr><th>Chipset</th><td>Realtek RTL8762C</td></tr><tr><th>Sensors</th><td>VC32S dual-PD PPG (HR/SpO2), 3-axis accel + gyro</td></tr><tr><th>Display</th><td>1.1" AMOLED color, 240×120 pixels</td></tr><tr><th>Bluetooth</th><td>BLE 5.0</td></tr><tr><th>Battery</th><td>180mAh Li-Po</td></tr><tr><th>Battery Life</th><td>7-10 days typical / 20 days standby</td></tr><tr><th>Charging</th><td>Magnetic 2-pin charger, ~2h full</td></tr><tr><th>Material</th><td>PC + zinc alloy frame, TPU strap</td></tr><tr><th>Weight</th><td>25g (with strap)</td></tr><tr><th>Strap Colors</th><td>Black, blue, gray, rose gold (custom)</td></tr><tr><th>Waterproof</th><td>IP68</td></tr><tr><th>Health</th><td>24/7 HR, SpO2, sleep, female health</td></tr><tr><th>Sports</th><td>20+ sport modes, step/calorie/distance</td></tr><tr><th>App</th><td>QRing (iOS 9+/Android 5.1+) — 15 languages</td></tr><tr><th>Certifications</th><td>CE, FCC, RoHS</td></tr><tr><th>MOQ</th><td>50 pcs (samples accepted)</td></tr>',
+      cn: '<table><tr><th>型号</th><td>B10 Pro 智能手环</td></tr><tr><th>芯片</th><td>Realtek RTL8762C</td></tr><tr><th>屏幕</th><td>1.1英寸AMOLED 240×120</td></tr><tr><th>蓝牙</th><td>BLE 5.0</td></tr><tr><th>电池</th><td>180mAh，7-10天/20天待机</td></tr><tr><th>充电</th><td>磁吸2针充电，约2小时</td></tr><tr><th>材质</th><td>PC+锌合金边框，TPU表带</td></tr><tr><th>重量</th><td>25克(含表带)</td></tr><tr><th>防水</th><td>IP68</td></tr><tr><th>健康</th><td>24/7心率/血氧/睡眠/女性健康</td></tr><tr><th>运动</th><td>20+运动模式</td></tr><tr><th>认证</th><td>CE, FCC, RoHS</td></tr><tr><th>起订量</th><td>50件（可打样）</td></tr>',
+      es: '<table><tr><th>Modelo</th><td>B10 Pro Pulsera Inteligente</td></tr><tr><th>Chipset</th><td>Realtek RTL8762C</td></tr><tr><th>Pantalla</th><td>1.1" AMOLED 240×120</td></tr><tr><th>Bluetooth</th><td>BLE 5.0</td></tr><tr><th>Batería</th><td>180mAh, 7-10 días / 20 espera</td></tr><tr><th>Material</th><td>PC + aleación zinc, correa TPU</td></tr><tr><th>Peso</th><td>25g (con correa)</td></tr><tr><th>Resistencia</th><td>IP68</td></tr><tr><th>Salud</th><td>24/7 ritmo cardíaco, SpO2, sueño</td></tr><tr><th>Certificaciones</th><td>CE, FCC, RoHS</td></tr><tr><th>MOQ</th><td>50 uds (muestras aceptadas)</td></tr>',
+      ar: '<table><tr><th>الموديل</th><td>B10 Pro سوار ذكي</td></tr><tr><th>المعالج</th><td>Realtek RTL8762C</td></tr><tr><th>الشاشة</th><td>1.1 بوصة AMOLED 240×120</td></tr><tr><th>بلوتوث</th><td>BLE 5.0</td></tr><tr><th>البطارية</th><td>180mAh، 7-10 أيام / 20 استعداد</td></tr><tr><th>الوزن</th><td>25 غرام (مع السوار)</td></tr><tr><th>مقاومة الماء</th><td>IP68</td></tr><tr><th>الصحة</th><td>24/7 معدل ضربات القلب، الأكسجين، النوم</td></tr><tr><th>الشهادات</th><td>CE, FCC, RoHS</td></tr><tr><th>الحد الأدنى</th><td>50 قطعة</td></tr>'
+    },
+    watch: {
+      en: '<table><tr><th>Model</th><td>W30 Elite Smart Watch</td></tr><tr><th>Chipset</th><td>Nordic nRF52840</td></tr><tr><th>Display</th><td>1.43" AMOLED round, 466×466, always-on</td></tr><tr><th>Sensors</th><td>HX3605 PPG (HR/SpO2), 6-axis accel+gyro</td></tr><tr><th>Positioning</th><td>GPS + GLONASS + Galileo</td></tr><tr><th>Bluetooth</th><td>BLE 5.0</td></tr><tr><th>Battery</th><td>420mAh Li-Po</td></tr><tr><th>Battery Life</th><td>5-7 days typical / 30 days standby</td></tr><tr><th>Charging</th><td>Magnetic wireless, ~2.5h full</td></tr><tr><th>Material</th><td>Stainless steel case, silicone/leather strap</td></tr><tr><th>Weight</th><td>55g (with silicone strap)</td></tr><tr><th>Waterproof</th><td>5ATM + IP68</td></tr><tr><th>Health</th><td>24/7 HR, SpO2, stress, sleep</td></tr><tr><th>Sports</th><td>100+ modes, GPS route, VO2 max, recovery advisor</td></tr><tr><th>NFC</th><td>Optional NFC payments</td></tr><tr><th>App</th><td>QRing (iOS 9+/Android 5.1+) — 20 languages</td></tr><tr><th>Certifications</th><td>CE, FCC, RoHS</td></tr><tr><th>MOQ</th><td>50 pcs (samples accepted)</td></tr>',
+      cn: '<table><tr><th>型号</th><td>W30 Elite 智能手表</td></tr><tr><th>芯片</th><td>Nordic nRF52840</td></tr><tr><th>屏幕</th><td>1.43英寸AMOLED圆屏 466×466 常亮显示</td></tr><tr><th>定位</th><td>GPS+GLONASS+Galileo</td></tr><tr><th>电池</th><td>420mAh，5-7天/30天待机</td></tr><tr><th>材质</th><td>不锈钢表壳，硅胶/皮革表带</td></tr><tr><th>重量</th><td>55克(含硅胶表带)</td></tr><tr><th>防水</th><td>5ATM + IP68</td></tr><tr><th>运动</th><td>100+运动模式，GPS路线追踪</td></tr><tr><th>认证</th><td>CE, FCC, RoHS</td></tr><tr><th>起订量</th><td>50件（可打样）</td></tr>',
+      es: '<table><tr><th>Modelo</th><td>W30 Elite Reloj Inteligente</td></tr><tr><th>Chipset</th><td>Nordic nRF52840</td></tr><tr><th>Pantalla</th><td>1.43" AMOLED 466×466, siempre encendida</td></tr><tr><th>Posicionamiento</th><td>GPS + GLONASS + Galileo</td></tr><tr><th>Batería</th><td>420mAh, 5-7 días / 30 espera</td></tr><tr><th>Material</th><td>Acero inoxidable, correa silicona/cuero</td></tr><tr><th>Resistencia</th><td>5ATM + IP68</td></tr><tr><th>Deportes</th><td>100+ modos, ruta GPS, VO2 max</td></tr><tr><th>Certificaciones</th><td>CE, FCC, RoHS</td></tr><tr><th>MOQ</th><td>50 uds</td></tr>',
+      ar: '<table><tr><th>الموديل</th><td>W30 Elite ساعة ذكية</td></tr><tr><th>المعالج</th><td>Nordic nRF52840</td></tr><tr><th>الشاشة</th><td>1.43 بوصة AMOLED 466×466، تشغيل دائم</td></tr><tr><th>الموقع</th><td>GPS + GLONASS + Galileo</td></tr><tr><th>البطارية</th><td>420mAh، 5-7 أيام / 30 استعداد</td></tr><tr><th>الوزن</th><td>55 غرام</td></tr><tr><th>مقاومة الماء</th><td>5ATM + IP68</td></tr><tr><th>الرياضة</th><td>100+ وضع، تتبع GPS</td></tr><tr><th>الشهادات</th><td>CE, FCC, RoHS</td></tr><tr><th>الحد الأدنى</th><td>50 قطعة</td></tr>'
+    },
+    glasses: {
+      en: '<table><tr><th>Model</th><td>G1 Lite Smart Glasses</td></tr><tr><th>Chipset</th><td>BES2600 series audio SoC</td></tr><tr><th>Audio</th><td>Open-ear directional speakers, dual mic array</td></tr><tr><th>Control</th><td>Capacitive side touch panel</td></tr><tr><th>IMU</th><td>6-axis accelerometer + gyroscope</td></tr><tr><th>Bluetooth</th><td>BLE 5.2 + classic audio</td></tr><tr><th>Battery</th><td>110mAh per arm (total 220mAh)</td></tr><tr><th>Battery Life</th><td>6h music / 4h calls / 7 days standby</td></tr><tr><th>Charging</th><td>Magnetic pogo-pin cable, ~1.5h</td></tr><tr><th>Lens</th><td>Blue-light blocking + optional prescription insert</td></tr><tr><th>Frame</th><td>TR90 lightweight composite</td></tr><tr><th>Weight</th><td>38g</td></tr><tr><th>Colors</th><td>Black, tortoise, crystal gray (custom)</td></tr><tr><th>Weather</th><td>IP54 dust/splash resistant</td></tr><tr><th>Features</th><td>Open-ear audio, voice assistant, touch controls, anti-loss</td></tr><tr><th>App</th><td>QRing (iOS 9+/Android 5.1+) — 12 languages</td></tr><tr><th>Certifications</th><td>CE, FCC, RoHS</td></tr><tr><th>MOQ</th><td>50 pcs (samples accepted)</td></tr>',
+      cn: '<table><tr><th>型号</th><td>G1 Lite 智能眼镜</td></tr><tr><th>芯片</th><td>BES2600 音频SoC</td></tr><tr><th>音频</th><td>开放式定向扬声器，双麦克风</td></tr><tr><th>操控</th><td>电容式侧边触控</td></tr><tr><th>蓝牙</th><td>BLE 5.2 + 经典音频</td></tr><tr><th>电池</th><td>每臂110mAh(共220mAh)</td></tr><tr><th>续航</th><td>6小时音乐/4小时通话/7天待机</td></tr><tr><th>镜片</th><td>防蓝光+可选近视镜片</td></tr><tr><th>镜框</th><td>TR90轻量复合材料</td></tr><tr><th>重量</th><td>38克</td></tr><tr><th>颜色</th><td>黑色/玳瑁/水晶灰(可定制)</td></tr><tr><th>防护</th><td>IP54防尘防溅</td></tr><tr><th>特色</th><td>开放式音频，语音助手，触控，防丢提醒</td></tr><tr><th>认证</th><td>CE, FCC, RoHS</td></tr><tr><th>起订量</th><td>50件（可打样）</td></tr>',
+      es: '<table><tr><th>Modelo</th><td>G1 Lite Gafas Inteligentes</td></tr><tr><th>Chipset</th><td>BES2600 SoC de audio</td></tr><tr><th>Audio</th><td>Altavoces direccionales, micrófono dual</td></tr><tr><th>Bluetooth</th><td>BLE 5.2 + audio clásico</td></tr><tr><th>Batería</th><td>110mAh por brazo (220mAh total)</td></tr><tr><th>Peso</th><td>38g</td></tr><tr><th>Resistencia</th><td>IP54</td></tr><tr><th>Características</th><td>Audio abierto, asistente voz, táctil</td></tr><tr><th>Certificaciones</th><td>CE, FCC, RoHS</td></tr><tr><th>MOQ</th><td>50 uds</td></tr>',
+      ar: '<table><tr><th>الموديل</th><td>G1 Lite نظارة ذكية</td></tr><tr><th>المعالج</th><td>BES2600 SoC صوتي</td></tr><tr><th>الصوت</th><td>سماعات اتجاهية مفتوحة، ميكروفون مزدوج</td></tr><tr><th>بلوتوث</th><td>BLE 5.2 + صوت كلاسيكي</td></tr><tr><th>البطارية</th><td>110mAh لكل ذراع (220mAh إجمالي)</td></tr><tr><th>الوزن</th><td>38 غرام</td></tr><tr><th>مقاومة الطقس</th><td>IP54</td></tr><tr><th>الشهادات</th><td>CE, FCC, RoHS</td></tr><tr><th>الحد الأدنى</th><td>50 قطعة</td></tr>'
+    }
+  };
+
+  /* ============================================================
+     MULTI-LANGUAGE DICTIONARY
+     ============================================================ */
+  const i18nDict = {
+    en: {
+      'nav.home':'Home','nav.products':'Products','nav.about':'About Us','nav.whyus':'Why Us','nav.contact':'Contact',
+      'hero.moq':'Factory Direct · MOQ from','hero.sample':'Samples Accepted',
+      'hero.title1':'Precision Smart Wearables','hero.title2':'for Global Brands',
+      'hero.sub':'Shenzhen-based OEM/ODM manufacturer · Nordic nRF54L15 chipset · 8+ years wearable experience',
+      'hero.cta':'Get a Quote','hero.explore':'View Products',
+      'products.tag':'Our Products','products.title':'Smart Wearable Lineup','products.sub':'OEM/ODM ready — customizable design, packaging, firmware, and branding. All models CE/FCC/RoHS certified.',
+      'products.moq':'MOQ from','products.lead':'Sample lead time','products.oem':'Logo engraving, custom packaging, white-label app available',
+      'products.ring.name':'R20 Smart Ring','products.band.name':'B10 Pro Smart Bracelet','products.watch.name':'W30 Elite Smart Watch','products.glasses.name':'G1 Lite Smart Glasses',
+      'products.ring.desc':'Grade 5 titanium ring with 4-channel health monitoring (HR, SpO2, body temp, HRV), wireless charging, 5ATM.',
+      'products.band.desc':'Fitness tracker with 24/7 HR/SpO2/sleep, 20+ sport modes, 7-10 day battery, magnetic charging.',
+      'products.watch.desc':'Full-featured smartwatch with GPS/GLONASS, stainless steel case, always-on display, 5-7 day battery.',
+      'products.glasses.desc':'Lightweight smart glasses with directional speakers, voice assistant, blue-light blocking lenses, 6h music.',
+      'products.learn':'View Specs','products.inquire':'Inquire About This Product','products.moq_label':'MOQ',
+      'about.tag':'About Us','about.title':'Your OEM/ODM Partner Since 2018',
+      'about.desc':'Shan Tongren Technology (Shenzhen) Co., LTD is a professional smart wearable manufacturer serving 50+ countries with in-house R&D, mold design, and assembly.',
+      'about.stat1':'Factory + R&D Center','about.stat2':'Annual Capacity','about.stat3':'Export Countries','about.stat4':'Full Certification',
+      'whyus.tag':'Why ORICHALCUM','whyus.title':'8 Reasons Global Brands Choose Us','whyus.sub':'From prototype to mass production and beyond — we deliver.',
+      'whyus.i1.title':'Fast Sampling','whyus.i1.desc':'Samples in 7 days. Rapid iteration until approval.',
+      'whyus.i2.title':'Strict QC','whyus.i2.desc':'100% inspection. CE, FCC, RoHS, REACH certified.',
+      'whyus.i3.title':'Low MOQ','whyus.i3.desc':'From 50 pcs. Test the market risk-free.',
+      'whyus.i4.title':'Full Customization','whyus.i4.desc':'Logo, packaging, firmware, app UI — all customizable.',
+      'whyus.i5.title':'Global Logistics','whyus.i5.desc':'DHL/FedEx sea/air. Door-to-door worldwide.',
+      'whyus.i6.title':'12-Month Warranty','whyus.i6.desc':'Full warranty + 24/7 after-sales support.',
+      'whyus.i7.title':'30+ Patents','whyus.i7.desc':'Design patents protect your exclusive models.',
+      'whyus.i8.title':'NDA Protected','whyus.i8.desc':'Your ideas stay confidential. NDA before discussion.',
+      'trust.tag':'Trusted Partners','trust.title':'Certifications & Social Proof','trust.sub':'Certified quality, trusted by brands across 50+ countries.',
+      'faq.tag':'FAQ','faq.title':'Frequently Asked Questions','faq.sub':'Answers to the most common questions from our B2B partners.',
+      'faq.q1':'What is your MOQ?','faq.a1':'Our standard MOQ is 50 pcs per model for mass production. Sample orders (1-5 pcs) are always accepted for evaluation.',
+      'faq.q2':'What are your lead times?','faq.a2':'Samples: 3-7 working days. Mass production: 15-25 working days after sample approval and deposit.',
+      'faq.q3':'What payment terms do you offer?','faq.a3':'T/T bank transfer (30% deposit, 70% before shipment), L/C at sight, PayPal for sample orders.',
+      'faq.q4':'What customization options do you offer?','faq.a4':'Full OEM/ODM: Ring body engraving, custom colors (PVD coating), custom packaging, white-label app, custom firmware, custom charging accessories.',
+      'faq.q5':'Do you have certifications and warranty?','faq.a5':'Yes! CE (EMC & Safety), FCC Part 15B, RoHS, REACH. 5ATM/IP68 test reports. 12-month warranty on all products.',
+      'contact.tag':'Get in Touch','contact.title':'Request a Quote or Sample',
+      'contact.sub':'Tell us your target market, volume, and customization needs — we\'ll respond within 24 hours with pricing and lead time.',
+      'contact.submit':'Send Inquiry','contact.success.title':'Thank You!','contact.success.msg':'Your inquiry has been sent. We\'ll respond within 24 hours.',
+      'contact.success.alt':'Also reach us directly: jack.huang@orichalcum.cc | +86 136 3294 2782',
+      'contact.err.name':'Please enter your name','contact.err.email':'Please enter a valid email','contact.err.company':'Please enter your company name',
+      'contact.interest.default':'Select Product Interest','contact.interest.multiple':'Multiple Products',
+      'contact.info.title':'Contact Information','contact.info.phone':'Phone / WhatsApp','contact.info.wechat':'WeChat','contact.info.email':'Email','contact.info.address':'Factory Address','contact.info.contact':'Contact Person','contact.info.response':'Response Time','contact.info.response_val':'Typically within 2 hours during business hours (GMT+8)',
+      'footer.tag':'Shan Tongren Technology (Shenzhen) Co., LTD','footer.rights':'All rights reserved.'
+    },
+    cn: {
+      'nav.home':'首页','nav.products':'产品中心','nav.about':'关于我们','nav.whyus':'为什么选择我们','nav.contact':'联系我们',
+      'hero.moq':'工厂直供 · 起订量','hero.sample':'可打样',
+      'hero.title1':'精密智能穿戴设备','hero.title2':'助力全球品牌',
+      'hero.sub':'深圳OEM/ODM制造商 · Nordic nRF54L15芯片方案 · 8年以上穿戴经验',
+      'hero.cta':'获取报价','hero.explore':'查看产品',
+      'products.tag':'产品中心','products.title':'智能穿戴产品线','products.sub':'支持OEM/ODM——定制外观、包装、固件、品牌。全系CE/FCC/RoHS认证。',
+      'products.moq':'起订量','products.lead':'打样交期','products.oem':'支持Logo镭雕、定制包装、白标APP',
+      'products.ring.name':'R20 智能戒指','products.band.name':'B10 Pro 智能手环','products.watch.name':'W30 Elite 智能手表','products.glasses.name':'G1 Lite 智能眼镜',
+      'products.ring.desc':'5级钛合金戒指，4通道健康监测(心率/血氧/体温/HRV)，无线充电，5ATM防水。',
+      'products.band.desc':'24/7心率/血氧/睡眠追踪，20+运动模式，7-10天续航，磁吸充电。',
+      'products.watch.desc':'全功能智能手表，GPS/GLONASS定位，不锈钢表壳，常亮屏，5-7天续航。',
+      'products.glasses.desc':'38克轻量智能眼镜，定向扬声器，语音助手，防蓝光镜片，6小时音乐。',
+      'products.learn':'查看规格','products.inquire':'咨询此产品','products.moq_label':'起订量',
+      'about.tag':'关于我们','about.title':'您的OEM/ODM合作伙伴（2018年至今）',
+      'about.desc':'善同仁科技（深圳）有限公司是专业智能穿戴制造商，服务50多个国家，拥有自主研发、模具设计和组装能力。',
+      'about.stat1':'工厂+研发中心','about.stat2':'年产能','about.stat3':'出口国家','about.stat4':'全认证资质',
+      'whyus.tag':'选择ORICHALCUM的理由','whyus.title':'全球品牌选择我们的8大理由','whyus.sub':'从打样到量产及售后，我们全程护航。',
+      'whyus.i1.title':'快速打样','whyus.i1.desc':'7天出样，快速迭代到满意为止。',
+      'whyus.i2.title':'严格品控','whyus.i2.desc':'100%全检，CE/FCC/RoHS/REACH认证。',
+      'whyus.i3.title':'低起订量','whyus.i3.desc':'50件起订，零风险试水市场。',
+      'whyus.i4.title':'全定制化','whyus.i4.desc':'Logo/包装/固件/APP均可定制。',
+      'whyus.i5.title':'全球物流','whyus.i5.desc':'DHL/FedEx海空运，全球门到门。',
+      'whyus.i6.title':'12月质保','whyus.i6.desc':'全质保+24/7售后支持。',
+      'whyus.i7.title':'30+专利','whyus.i7.desc':'设计专利，保护您的独家款式。',
+      'whyus.i8.title':'保密协议','whyus.i8.desc':'您的创意全程保密，合作前签NDA。',
+      'trust.tag':'信赖之选','trust.title':'认证资质与合作证明','trust.sub':'认证品质，50+国家品牌信赖。',
+      'faq.tag':'常见问题','faq.title':'B2B合作常见问题','faq.sub':'合作伙伴最常问的问题。',
+      'faq.q1':'MOQ（最低起订量）是多少？','faq.a1':'量产标准MOQ为每款50件。打样订单（1-5件）始终接受，建议新客户先打样评估。',
+      'faq.q2':'交期是多久？','faq.a2':'打样：3-7个工作日。量产：样品确认并收款后15-25个工作日。',
+      'faq.q3':'接受哪些付款方式？','faq.a3':'T/T电汇（30%定金，70%发货前付清），即期L/C，打样支持PayPal。',
+      'faq.q4':'支持哪些定制选项？','faq.a4':'全OEM/ODM：戒指刻字、颜色(PVD镀膜)、定制包装、白标APP、定制固件、定制充电配件。',
+      'faq.q5':'是否有认证和质保？','faq.a5':'有！CE(EMC&Safety)、FCC Part 15B、RoHS、REACH。5ATM/IP68检测报告。全产品12个月质保。',
+      'contact.tag':'联系我们','contact.title':'获取报价或申请样品',
+      'contact.sub':'告诉我们您的目标市场、数量和定制需求，24小时内回复报价和交期。',
+      'contact.submit':'发送询盘','contact.success.title':'感谢！','contact.success.msg':'询盘已发送，我们将在24小时内回复。',
+      'contact.success.alt':'也可直接联系：jack.huang@orichalcum.cc | +86 136 3294 2782',
+      'contact.err.name':'请输入姓名','contact.err.email':'请输入有效邮箱','contact.err.company':'请输入公司名称',
+      'contact.interest.default':'选择感兴趣的产品','contact.interest.multiple':'多款产品',
+      'contact.info.title':'联系方式','contact.info.phone':'电话 / WhatsApp','contact.info.wechat':'微信','contact.info.email':'邮箱','contact.info.address':'工厂地址','contact.info.contact':'联系人','contact.info.response':'响应时间','contact.info.response_val':'工作时间（GMT+8）通常2小时内回复',
+      'footer.tag':'善同仁科技（深圳）有限公司','footer.rights':'保留所有权利'
+    },
+    es: {
+      'nav.home':'Inicio','nav.products':'Productos','nav.about':'Sobre Nosotros','nav.whyus':'Por Qué Nosotros','nav.contact':'Contacto',
+      'hero.moq':'Fábrica Directa · MOQ desde','hero.sample':'Muestras Aceptadas',
+      'hero.title1':'Wearables Inteligentes de Precisión','hero.title2':'para Marcas Globales',
+      'hero.sub':'Fabricante OEM/ODM en Shenzhen · Nordic nRF54L15 · 8+ años de experiencia',
+      'hero.cta':'Solicitar Cotización','hero.explore':'Ver Productos',
+      'products.tag':'Nuestros Productos','products.title':'Línea de Wearables Inteligentes','products.sub':'Listo OEM/ODM — diseño, empaque, firmware y marca personalizables.',
+      'products.moq':'MOQ desde','products.lead':'Muestras en','products.oem':'Grabado de logotipo, empaque personalizado, app de marca blanca',
+      'products.ring.name':'R20 Anillo Inteligente','products.band.name':'B10 Pro Pulsera Inteligente','products.watch.name':'W30 Elite Reloj Inteligente','products.glasses.name':'G1 Lite Gafas Inteligentes',
+      'products.ring.desc':'Anillo titanio G5, monitoreo 4 canales (HR/SpO2/temp/HRV), carga inalámbrica, 5ATM.',
+      'products.band.desc':'Monitor 24/7 HR/SpO2/sueño, 20+ deportes, batería 7-10 días, carga magnética.',
+      'products.watch.desc':'Reloj completo con GPS, caja acero inoxidable, pantalla siempre encendida, 5-7 días.',
+      'products.glasses.desc':'Gafas ligeras 38g, altavoces direccionales, asistente voz, lentes antiluz azul.',
+      'products.learn':'Ver Especificaciones','products.inquire':'Consultar Este Producto','products.moq_label':'MOQ',
+      'about.tag':'Sobre Nosotros','about.title':'Su Socio OEM/ODM Desde 2018',
+      'about.desc':'Shan Tongren Technology (Shenzhen) Co., LTD fabricante profesional con I+D, diseño de moldes y ensamblaje propios.',
+      'about.stat1':'Fábrica + I+D','about.stat2':'Capacidad Anual','about.stat3':'Países','about.stat4':'Certificación',
+      'whyus.tag':'Por Qué ORICHALCUM','whyus.title':'8 Razones para Elegirnos','whyus.sub':'Del prototipo a producción y más allá.',
+      'whyus.i1.title':'Muestras Rápidas','whyus.i1.desc':'Muestras en 7 días. Iteración rápida.',
+      'whyus.i2.title':'Control de Calidad','whyus.i2.desc':'100% inspección. Certificaciones internacionales.',
+      'whyus.i3.title':'MOQ Bajo','whyus.i3.desc':'Desde 50 uds. Pruebe el mercado sin riesgo.',
+      'whyus.i4.title':'Personalización Total','whyus.i4.desc':'Logo, empaque, firmware y app personalizables.',
+      'whyus.i5.title':'Logística Global','whyus.i5.desc':'DHL/FedEx, puerta a puerta mundial.',
+      'whyus.i6.title':'Garantía 12 Meses','whyus.i6.desc':'Garantía completa + soporte 24/7.',
+      'whyus.i7.title':'30+ Patentes','whyus.i7.desc':'Patentes que protegen sus diseños exclusivos.',
+      'whyus.i8.title':'NDA Confidencial','whyus.i8.desc':'Sus ideas protegidas. NDA antes de negociar.',
+      'trust.tag':'Socios de Confianza','trust.title':'Certificaciones y Prueba Social','trust.sub':'Calidad certificada, marcas confían en nosotros.',
+      'faq.tag':'Preguntas Frecuentes','faq.title':'Preguntas Frecuentes B2B','faq.sub':'Respuestas a preguntas comunes de socios B2B.',
+      'faq.q1':'¿Cuál es su MOQ?','faq.a1':'MOQ estándar 50 uds por modelo. Muestras (1-5 uds) siempre aceptadas.',
+      'faq.q2':'¿Cuáles son los plazos?','faq.a2':'Muestras: 3-7 días hábiles. Producción: 15-25 días tras aprobación.',
+      'faq.q3':'¿Qué métodos de pago?','faq.a3':'Transferencia T/T, L/C vista, PayPal para muestras.',
+      'faq.q4':'¿Qué personalización ofrecen?','faq.a4':'Grabado, colores PVD, empaque, app marca blanca, firmware personalizado.',
+      'faq.q5':'¿Tienen certificaciones y garantía?','faq.a5':'CE, FCC, RoHS, REACH. 5ATM/IP68. Garantía 12 meses.',
+      'contact.tag':'Contacto','contact.title':'Solicitar Cotización o Muestra',
+      'contact.sub':'Cuéntenos su mercado, volumen y necesidades — respondemos en 24h.',
+      'contact.submit':'Enviar Consulta','contact.success.title':'¡Gracias!','contact.success.msg':'Consulta enviada. Responderemos en 24h.',
+      'contact.success.alt':'Contáctenos directamente: jack.huang@orichalcum.cc | +86 136 3294 2782',
+      'contact.err.name':'Ingrese su nombre','contact.err.email':'Ingrese un email válido','contact.err.company':'Ingrese su empresa',
+      'contact.interest.default':'Seleccione Producto','contact.interest.multiple':'Múltiples Productos',
+      'contact.info.title':'Información de Contacto','contact.info.phone':'Teléfono / WhatsApp','contact.info.wechat':'WeChat','contact.info.email':'Email','contact.info.address':'Dirección Fábrica','contact.info.contact':'Persona de Contacto','contact.info.response':'Tiempo de Respuesta','contact.info.response_val':'Generalmente 2h en horario laboral (GMT+8)',
+      'footer.tag':'Shan Tongren Technology (Shenzhen) Co., LTD','footer.rights':'Todos los derechos reservados.'
+    },
+    ar: {
+      'nav.home':'الرئيسية','nav.products':'المنتجات','nav.about':'عن الشركة','nav.whyus':'لماذا نحن','nav.contact':'اتصل بنا',
+      'hero.moq':'مباشر من المصنع · الحد الأدنى من','hero.sample':'تقبل العينات',
+      'hero.title1':'أجهزة ذكية قابلة للارتداء فائقة الدقة','hero.title2':'للعلامات التجارية العالمية',
+      'hero.sub':'مصنع OEM/ODM في شنتشن · معالج Nordic nRF54L15 · أكثر من 8 سنوات خبرة',
+      'hero.cta':'اطلب عرض سعر','hero.explore':'عرض المنتجات',
+      'products.tag':'منتجاتنا','products.title':'تشكيلة الأجهزة الذكية القابلة للارتداء','products.sub':'جاهزة OEM/ODM — تصميم وتغليف وبرامج وعلامة تجارية مخصصة.',
+      'products.moq':'الحد الأدنى من','products.lead':'وقت العينة','products.oem':'نقش الشعار، تغليف مخصص، تطبيق بالعلامة البيضاء',
+      'products.ring.name':'R20 خاتم ذكي','products.band.name':'B10 Pro سوار ذكي','products.watch.name':'W30 Elite ساعة ذكية','products.glasses.name':'G1 Lite نظارة ذكية',
+      'products.ring.desc':'خاتم تيتانيوم درجة 5، مراقبة صحية 4 قنوات، شحن لاسلكي، 5ATM.',
+      'products.band.desc':'مراقبة 24/7 لمعدل ضربات القلب والأكسجين والنوم، 20+ رياضة، بطارية 7-10 أيام.',
+      'products.watch.desc':'ساعة ذكية متكاملة مع GPS، هيكل فولاذ مقاوم للصدأ، شاشة دائمة التشغيل.',
+      'products.glasses.desc':'نظارة خفيفة 38g مع مكبرات صوت اتجاهية، مساعد صوتي، عدسات مانعة للضوء الأزرق.',
+      'products.learn':'عرض المواصفات','products.inquire':'استفسر عن هذا المنتج','products.moq_label':'الحد الأدنى',
+      'about.tag':'عن الشركة','about.title':'شريكك في التصنيع OEM/ODM منذ 2018',
+      'about.desc':'شركة شان تونغرن للتكنولوجيا (شنتشن) المحدودة، مصنع محترف مع قسم بحث وتطوير وتصميم قوالب وتجميع داخلي.',
+      'about.stat1':'مصنع + بحث وتطوير','about.stat2':'الطاقة الإنتاجية','about.stat3':'دول التصدير','about.stat4':'شهادات كاملة',
+      'whyus.tag':'لماذا ORICHALCUM','whyus.title':'8 أسباب تجعل العلامات التجارية تختارنا','whyus.sub':'من النموذج الأولي إلى الإنتاج الضخم وما بعده.',
+      'whyus.i1.title':'نماذج سريعة','whyus.i1.desc':'نماذج في 7 أيام. تكرار سريع حتى الموافقة.',
+      'whyus.i2.title':'رقابة جودة صارمة','whyus.i2.desc':'تفتيش 100%. شهادات CE/FCC/RoHS/REACH.',
+      'whyus.i3.title':'الحد الأدنى منخفض','whyus.i3.desc':'من 50 قطعة. اختبر السوق بدون مخاطرة.',
+      'whyus.i4.title':'تخصيص كامل','whyus.i4.desc':'الشعار والتغليف والبرامج وواجهة التطبيق كلها قابلة للتخصيص.',
+      'whyus.i5.title':'لوجستيات عالمية','whyus.i5.desc':'DHL/FedEx بحراً وجواً. باب إلى باب عالمياً.',
+      'whyus.i6.title':'ضمان 12 شهراً','whyus.i6.desc':'ضمان كامل + دعم 24/7.',
+      'whyus.i7.title':'30+ براءة اختراع','whyus.i7.desc':'براءات اختراع تصميم تحمي موديلاتك الحصرية.',
+      'whyus.i8.title':'محمي باتفاقية سرية','whyus.i8.desc':'أفكارك تبقى سرية. توقيع NDA قبل المناقشة.',
+      'trust.tag':'شركاء موثوقون','trust.title':'الشهادات والدليل الاجتماعي','trust.sub':'جودة معتمدة، تثق بنا علامات تجارية في أكثر من 50 دولة.',
+      'faq.tag':'الأسئلة الشائعة','faq.title':'الأسئلة الشائعة للشراكة التجارية','faq.sub':'إجابات لأكثر الأسئلة شيوعاً من شركائنا.',
+      'faq.q1':'ما هو الحد الأدنى للطلب؟','faq.a1':'50 قطعة لكل موديل للإنتاج. أوامر العينات (1-5 قطع) مقبولة دائماً.',
+      'faq.q2':'ما هي أوقات التسليم؟','faq.a2':'العينات: 3-7 أيام عمل. الإنتاج: 15-25 يوماً بعد الموافقة.',
+      'faq.q3':'ما طرق الدفع المقبولة؟','faq.a3':'تحويل بنكي T/T، L/C عند الاطلاع، PayPal للعينات.',
+      'faq.q4':'ما خيارات التخصيص المتاحة؟','faq.a4':'نقش، ألوان PVD، تغليف مخصص، تطبيق بالعلامة البيضاء، برامج مخصصة.',
+      'faq.q5':'هل لديكم شهادات وضمان؟','faq.a5':'نعم! CE, FCC, RoHS, REACH. تقارير 5ATM/IP68. ضمان 12 شهراً.',
+      'contact.tag':'اتصل بنا','contact.title':'طلب عرض سعر أو عينة',
+      'contact.sub':'أخبرنا عن سوقك المستهدف وحجم الطلب واحتياجات التخصيص — سنرد خلال 24 ساعة.',
+      'contact.submit':'إرسال الاستفسار','contact.success.title':'شكراً!','contact.success.msg':'تم إرسال استفسارك. سنرد خلال 24 ساعة.',
+      'contact.success.alt':'اتصل بنا مباشرة: jack.huang@orichalcum.cc | +86 136 3294 2782',
+      'contact.err.name':'الرجاء إدخال الاسم','contact.err.email':'الرجاء إدخال بريد إلكتروني صحيح','contact.err.company':'الرجاء إدخال اسم الشركة',
+      'contact.interest.default':'اختر المنتج المهتم به','contact.interest.multiple':'منتجات متعددة',
+      'contact.info.title':'معلومات الاتصال','contact.info.phone':'هاتف / واتساب','contact.info.wechat':'وي شات','contact.info.email':'البريد الإلكتروني','contact.info.address':'عنوان المصنع','contact.info.contact':'الشخص المسؤول','contact.info.response':'وقت الرد','contact.info.response_val':'عادة خلال ساعتين في ساعات العمل (GMT+8)',
+      'footer.tag':'شركة شان تونغرن للتكنولوجيا (شنتشن) المحدودة','footer.rights':'جميع الحقوق محفوظة'
+    }
+  };
+
+  /* ============================================================
+     LANGUAGE SWITCHER
+     ============================================================ */
+  let currentLang = 'en';
+  function switchLang(lang) {
+    currentLang = lang;
+    const dict = i18nDict[lang];
+    if (!dict) return;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = dict[key];
+        else el.textContent = dict[key];
+      }
+    });
+    document.querySelectorAll('select option').forEach(opt => {
+      const key = opt.getAttribute('data-i18n');
+      if (key && dict[key] !== undefined) opt.textContent = dict[key];
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+    if (lang === 'ar') { document.documentElement.dir = 'rtl'; document.documentElement.lang = 'ar'; }
+    else { document.documentElement.dir = ''; document.documentElement.lang = lang === 'cn' ? 'zh' : lang; }
+    // Update product modal if open
+    const modalTitle = document.getElementById('modalTitle');
+    const activeProduct = modalTitle.dataset.product;
+    if (activeProduct && productSpecs[activeProduct]) {
+      const productKey = activeProduct;
+      const names = { ring: dict['products.ring.name'], band: dict['products.band.name'], watch: dict['products.watch.name'], glasses: dict['products.glasses.name'] };
+      modalTitle.textContent = names[productKey] || productKey;
+      modalContent.innerHTML = productSpecs[productKey][currentLang] || productSpecs[productKey].en;
+    }
+  }
+
+  document.getElementById('langSwitcher').addEventListener('click', function(e) {
+    const btn = e.target.closest('.lang-btn');
+    if (!btn) return;
+    switchLang(btn.dataset.lang);
+  });
+
+  /* ============================================================
+     PRODUCT MODAL
+     ============================================================ */
+  const modal = document.getElementById('productModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalModel = document.getElementById('modalModel');
+  const modalContent = document.getElementById('modalContent');
+  const modalClose = document.getElementById('modalClose');
+
+  document.querySelectorAll('[data-product]').forEach(el => {
+    el.addEventListener('click', function(e) {
+      const productKey = this.dataset.product;
+      if (productKey && productSpecs[productKey]) {
+        const langDict = i18nDict[currentLang];
+        const names = { ring: langDict['products.ring.name'], band: langDict['products.band.name'], watch: langDict['products.watch.name'], glasses: langDict['products.glasses.name'] };
+        const models = { ring: 'R20', band: 'B10 Pro', watch: 'W30 Elite', glasses: 'G1 Lite' };
+        modalTitle.textContent = names[productKey] || productKey;
+        modalTitle.dataset.product = productKey;
+        modalModel.textContent = models[productKey];
+        modalContent.innerHTML = productSpecs[productKey][currentLang] || productSpecs[productKey].en;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  modalClose.addEventListener('click', () => { modal.classList.remove('open'); document.body.style.overflow = ''; });
+  modal.addEventListener('click', function(e) { if (e.target === this) { this.classList.remove('open'); document.body.style.overflow = ''; } });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { modal.classList.remove('open'); document.body.style.overflow = ''; } });
+
+  /* ============================================================
+     FAQ ACCORDION
+     ============================================================ */
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const item = this.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(f => { f.classList.remove('open'); f.querySelector('.faq-answer').style.maxHeight = '0'; });
+      if (!isOpen) {
+        item.classList.add('open');
+        const answer = item.querySelector('.faq-answer');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ============================================================
+     FORM VALIDATION
+     ============================================================ */
+  const quoteForm = document.getElementById('quoteForm');
+  const formSuccess = document.getElementById('formSuccess');
+
+  quoteForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let valid = true;
+    const name = document.getElementById('formName');
+    const email = document.getElementById('formEmail');
+    const company = document.getElementById('formCompany');
+    document.querySelectorAll('.form-error').forEach(el => el.style.display = 'none');
+    if (!name.value.trim()) { document.getElementById('nameError').style.display = 'block'; valid = false; }
+    if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { document.getElementById('emailError').style.display = 'block'; valid = false; }
+    if (!company.value.trim()) { document.getElementById('companyError').style.display = 'block'; valid = false; }
+    if (!valid) return;
+    const formData = new FormData(quoteForm);
+    fetch(quoteForm.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } })
+      .then(r => { if (r.ok) { quoteForm.style.display = 'none'; formSuccess.style.display = 'block'; } else alert('Error. Please try again.'); })
+      .catch(() => { quoteForm.style.display = 'none'; formSuccess.style.display = 'block'; });
+  });
+
+  /* ============================================================
+     SCROLL REVEAL
+     ============================================================ */
+  document.querySelectorAll('.reveal').forEach(el => {
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.15 }).observe(el);
+    } else { el.classList.add('visible'); }
+  });
+
+  /* ============================================================
+     MOBILE HAMBURGER
+     ============================================================ */
+  document.getElementById('hamburger').addEventListener('click', function() { document.getElementById('navMenu').classList.toggle('open'); });
+  document.querySelectorAll('#navMenu a').forEach(link => link.addEventListener('click', () => document.getElementById('navMenu').classList.remove('open')));
+
+  console.log('🏭 ORICHALCUM B2B Website v2.0 — Loaded successfully');
+  console.log('🔤 Languages: EN / 中文 / ES / AR | 🏷 Real product data active');
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1a1a1a"/><stop offset="100%" style="stop-color:#111"/></linearGradient></defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <rect x="120" y="100" width="160" height="40" rx="20" fill="none" stroke="#c9a84c" stroke-width="4" opacity="0.6"/>
+  <rect x="140" y="140" width="120" height="140" rx="12" fill="none" stroke="#c9a84c" stroke-width="3" opacity="0.5"/>
+  <rect x="155" y="200" width="90" height="40" rx="6" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.4"/>
+  <text x="200" y="340" text-anchor="middle" fill="#999" font-size="14" font-family="sans-serif">Smart Bracelet</text>
+</svg>
